@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Voyagers</title>
+  <style>
+    body {
+      margin: 20px;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #01003a;
+      color: #ffffff;
+    }
+    body {
+  background: url('img/Espaço sideral 🌌.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: rgb(250, 246, 246);
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  }
+  .logo {
+    position: fixed;
+    
+    top: 10px;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 1000;
+  }
+    nav {
+      width: 220px;
+      background: rgba(47, 2, 83, 0.534);
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      position: fixed;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    nav h2 {
+      font-family: 'Orbitron', sans-serif;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #f8f5f8;
+    }
+
+    nav button {
+      margin: 8px 0;
+      padding: 12px;
+      background: #092ae4;
+      color: #fffafa;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background 0.3s;
+    }
+
+    nav button:hover {
+      background: #2020204b;
+      color: #f5f3f3;
+    }
+
+    main {
+      margin-left: 240px;
+      padding: 20px;
+      flex: 1;
+    }
+
+    section {
+      display: none;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h1, h2 {
+      font-family: 'Orbitron', sans-serif;
+      color: #f50642;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .gallery-item {
+      width: 300px;
+      text-align: center;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgb(110, 6, 230);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .feedback {
+      margin-top: 10px;
+      font-style: italic;
+      color: #29fabb;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <h2>Star Voyagers</h2>
+    <button onclick="showSection('inicio')">Inicio</button>
+    <button onclick="showSection('galeria')">Galería</button>
+    <button onclick="showSection('clima')">Clima Espacial</button>
+    <button onclick="showSection('efectos')">Efectos</button>
+    <button onclick="showSection('reto')">Nuestro Reto</button>
+    <button onclick="showSection('historieta')">Historieta</button>
+    <button onclick="showSection('preguntas')">Preguntas frecuentes</button>
+    <button onclick="showSection('quiz')">Quiz</button>
+    </nav>
+<img src="img/logo-removebg-preview.png" alt="Logo" class="logo">
+  <main>
+    <!-- Inicio -->
+    <section id="inicio" class="active">
+      <h1>🌌 Bienvenidos</h1>
+      <p>   El proyecto <strong>Star Voyagers</strong> nace como parte del reto <em>Historias Estelares</em> en el marco del NASA Space Apps Challenge 2025.
+Nuestro objetivo es acercar a las personas al clima espacial, un fenómeno que normalmente parece lejano, pero que afecta directamente nuestra vida diaria.
+  En esta página encontrarás:
+<ul>
+  <li>Una explicación sencilla del clima espacial.</li>
+  <li>Sus efectos en la vida humana y tecnológica.</li>
+  <li>La descripción de nuestro reto y misión como equipo.</li>
+  <li>Espacios interactivos de preguntas y un quiz para reforzar lo aprendido.</li>
+  <li>Una galería visual con imágenes y explicaciones de fenómenos espaciales.</li>
+</ul>
+
+  ¡Explora, aprende y comparte el conocimiento sobre el clima espacial con nosotros!</p>
+    </section>
+
+    <!-- Clima Espacial -->
+    <section id="clima">
+      <h1>☀️ Clima Espacial</h1>
+      <p>El clima espacial se refiere a las condiciones cambiantes en el espacio causadas por la actividad del Sol.
+  <ul>
+    <li>El Sol, además de darnos luz y calor, libera partículas cargadas y radiación.</li>
+    <li>Estas partículas viajan a través del espacio como viento solar.</li>
+    <li>Cuando interactúan con el campo magnético de la Tierra (magnetosfera), pueden causar efectos tanto bellos como riesgosos.</li>
+  </ul>
+      <!-- imagen clima espacial -->
+
+Fenómenos del clima espacial:
+  <ul>
+    <li></li>Erupciones solares: Explosiones de energía en la superficie del Sol que lanzan radiación al espacio.</li>
+    <li>Eyecciones de masa coronal (CME): Grandes nubes de plasma solar que viajan a gran velocidad.</li>
+    <li>Tormentas geomagnéticas: Alteraciones en la magnetosfera terrestre por el impacto de partículas solares.</li>
+    <li></li>Auroras boreales y australes: Luces en el cielo provocadas por la interacción del viento solar con la atmósfera terrestre.</li>
+  </ul>
+En resumen: el clima espacial funciona como una extensión del clima terrestre, pero ocurre en el espacio y depende de la actividad solar.</p>
+    </section>
+
+    <!-- Efectos -->
+    <section id="efectos">
+      <h1>🌍 Efectos en la Vida Humana</h1>
+      <p>El clima espacial no solo es un tema astronómico, sino también un fenómeno con impactos en la vida diaria:
+        <ol>
+          <li>
+            <strong>Tecnología y comunicaciones</strong>
+            <ul>
+              <li>Satélites pueden dañarse o dejar de transmitir señales.</li>
+              <li>GPS y radares pierden precisión, afectando navegación aérea y marítima.</li>
+              <li>Señales de radio e internet sufren interferencias.</li>
+            </ul>
+          </li>
+          <li>
+             <strong>Electricidad e infraestructura</strong>
+            <ul>
+              <li>Las tormentas geomagnéticas inducen corrientes en cables eléctricos.</li>
+              <li>Esto puede provocar apagones masivos, como ocurrió en Canadá en 1989.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Salud y exploración espacial</strong>
+            <ul>
+              <li>Astronautas corren riesgos de exposición a radiación.</li>
+              <li>Incluso en vuelos de gran altitud la radiación solar puede aumentar.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Vida cotidiana</strong>
+            <ul>
+              <li>Un apagón por clima espacial podría afectar hospitales, bancos, sistemas de agua y transporte.</li>
+              <li>La sociedad moderna, dependiente de la tecnología, es más vulnerable que nunca a estos fenómenos.</li>
+            </ul>
+          </li>
+        </ol>
+    </section>
+
+    <!-- Nuestro Reto -->
+    <section id="reto">
+      <h1>🚀 Nuestro Reto</h1>
+      <p>El reto <strong>Historias Estelares</strong> tiene como misión contar de forma creativa e inclusiva los efectos del clima espacial en nuestras vidas.
+ <ol>
+  <li.1>1.
+    <strong>Objetivo</strong>
+    <ul>
+      <li> Hacer que cualquier persona, sin importar su edad, pueda entender qué es el clima espacial y por qué es relevante.
+      </li>
+     </ul>
+    </li>
+  </ol>
+  <ol>
+  <li.2>2.
+    <strong>Misión:</strong>
+    <ul>
+      <li>Comunicar ciencia de manera sencilla, visual y entretenida.
+       </li>
+      </ul>
+    </li>
+  </ol>
+  <ol>
+  <li.3>3.
+    <strong>Solución:</strong>
+    <ul>
+      <li>Una página web interactiva con secciones educativas, preguntas, un quiz y una galería visual que acerque este tema a estudiantes y comunidades.
+       </li>
+      </ul>
+    </li>
+  </ol>
+    </section>
+
+    <!-- Historieta -->
+    <section id="historieta">
+      <h1>📖 Nuestra Historieta</h1>
+      <link rel="stylesheet" href="https://storytri.be/lQvGa5Vo">
+      <iframe src="https://storytri.be/lQvGa5Vo" width="100%" height="600px" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <!-- Preguntas -->
+   <section id="preguntas">
+  <h2>❓ Preguntas Frecuentes</h2>
+  <p>
+    El clima espacial puede parecer un tema lejano, pero en realidad afecta
+    muchas áreas de nuestra vida cotidiana. Aquí resolvemos algunas de las
+    dudas más comunes de forma sencilla y clara:
+  </p>
+    <button>🌌 ¿Qué es el clima espacial?</button>
+      <p>
+        <ul>
+          <li> El clima espacial hace referencia a las condiciones cambiantes en el
+        espacio exterior causadas por la actividad del Sol, como erupciones
+        solares, vientos solares y tormentas geomagnéticas.
+          </li>
+        </ul>
+         <br><strong>Retroalimentación: </strong>
+         Aunque no lo vemos a simple
+        vista, el clima espacial es real y puede alterar la tecnología que usamos
+        todos los días, como la televisión satelital o la señal de internet.
+      </p>
+
+    <button>☀️ ¿Cómo afecta a la Tierra?</button>
+      <p>
+        <ul>
+          <li> Puede interrumpir la comunicación satelital, alterar las señales GPS,
+        causar apagones eléctricos y hasta desviar vuelos aéreos. También genera
+        espectáculos visuales como auroras boreales y australes.
+          </li> 
+        </ul> 
+        <br><strong>Retroalimentación:</strong> 
+        Si respondieras que no afecta
+        nuestra vida diaria, sería incorrecto. La energía que usamos y los
+        sistemas de comunicación dependen directamente de que podamos
+        anticiparnos al clima espacial.
+      </p>
+
+    <button>🌍 ¿Qué relación tiene con nuestra vida diaria?</button>
+      <p>
+        <ul>
+          <li>  Usamos tecnología sensible al clima espacial todos los días: GPS para
+        ubicar un lugar, internet para comunicarnos, cajeros automáticos que
+        dependen de satélites, e incluso vuelos internacionales que pueden
+        cambiar de ruta.  
+          </li>
+        </ul>
+        <br><strong>Retroalimentación:</strong>
+          Creer que solo afecta a
+        astronautas es incorrecto. La realidad es que cada uno de nosotros, al
+        usar un celular o encender una luz, depende de sistemas que el clima
+        espacial puede poner en riesgo.
+      </p>
+
+    <button>⚡ ¿Qué se puede hacer para reducir los riesgos?</button>
+      <p>
+        <ul>
+          <li>Existen sistemas de monitoreo solar y alertas tempranas que ayudan a
+        prepararnos frente a tormentas solares. Los ingenieros también diseñan
+        satélites y redes eléctricas más resistentes a estas alteraciones.
+          </li> 
+        </ul>
+        <br><strong>Retroalimentación:</strong>
+         Pensar que no se puede hacer
+        nada sería incorrecto. La ciencia y la tecnología avanzan justamente para
+        prevenir los efectos negativos y proteger a las personas.
+      </p>
+</section>
+
+    <!-- Quiz -->
+    <section id="quiz">
+  <h2>📝Quiz: Aprende sobre el Clima Espacial</h2>
+  <div id="quiz-container">
+    <p id="question"></p>
+    <div id="options"></div>
+    <p id="feedback"></p>
+    <button id="next-btn" style="display:none;">Siguiente</button>
+  </div>
+</section>
+
+<style>
+#quiz-container {
+  background: rgba(50, 5, 248, 0.342);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+#options button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  background: #fc429f81;
+  color: #fff;
+  border: 1px solid #03686398;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: 0.3s;
+}
+#options button:hover {
+  background: #aa7ffa67;
+  color: #000;
+}
+#feedback {
+  margin-top: 15px;
+}
+</style>
+
+<script>
+const quizData = [
+  {
+    question: "🌌 ¿Qué es el clima espacial?",
+    options: [
+      "El estado del clima en la Tierra",
+      "Las condiciones causadas por la actividad del Sol",
+      "El pronóstico de lluvias y tormentas"
+    ],
+    answer: 1,
+    feedback: [
+      "❌ Incorrecto. El “clima terrestre” describe temperaturas, lluvias y vientos dentro de la atmósfera de la Tierra. El clima espacial no es eso: ocurre fuera de la atmósfera y está dominado por la actividad del Sol y por cómo ésta interactúa con el campo magnético terrestre. Confundir ambos conceptos es como confundir el tiempo en una ciudad con el tiempo en la atmósfera superior: son sistemas distintos con causas, escalas y efectos diferentes.",
+      "✅ Correcto. El clima espacial incluye erupciones solares, eyecciones de masa coronal, viento solar y tormentas geomagnéticas; todos son procesos originados en el Sol que viajan por el espacio y afectan la magnetosfera y la ionosfera de la Tierra. Estas condiciones generan efectos observables (auroras) y riesgos tecnológicos (interferencias satelitales, corrientes inducidas).",
+      "❌ Incorrecto. Las lluvias y tormentas se forman por procesos atmosféricos locales y no tienen relación causal con la actividad solar que define el clima espacial."
+    ]
+  },
+  {
+    question: "☀️ ¿Qué fenómeno puede causar el clima espacial?",
+    options: ["Huracanes", "Erupciones solares", "Tormentas de nieve"],
+    answer: 1,
+    feedback: [
+      "❌ Incorrecto. Los huracanes se forman por el calentamiento del océano y la dinámica atmosférica de la Tierra; son fenómenos meteorológicos terrestres y no están causados por la actividad solar. Aunque ambos (huracanes y tormentas solares) usan la palabra “tormenta”, sus orígenes son completamente distintos.",
+      "✅ Correcto. Las erupciones solares (flares) son explosiones repentinas de energía en la superficie del Sol que liberan radiación electromagnética y partículas aceleradas. Son una de las fuentes directas del clima espacial porque pueden producir interferencias de radio, ráfagas X y, si van acompañadas de eyecciones de masa coronal, tormentas geomagnéticas en la Tierra.",
+      "❌ Incorrecto. Las tormentas de nieve son fenómenos meteorológicos locales en la troposfera terrestre y no tienen relación con la actividad solar. No confundir meteorología terrestre con efectos originados en el Sol."
+    ]
+  },
+  {
+    question: "🛰️ ¿Qué sistemas humanos son más vulnerables?",
+    options: ["Satélites y GPS", "Carreteras y puentes", "Edificios y casas"],
+    answer: 0,
+    feedback: [
+      "✅ Correcto. Los satélites contienen electrónica sensible y dependen de la estabilidad del entorno espacial para funcionar. La radiación y las partículas cargadas pueden causar “soft errors” (fallos temporales), degradación de paneles solares y “spacecraft charging” (acumulación de carga) que daña componentes. Además, el GPS requiere señales de microondas muy precisas; las perturbaciones ionosféricas provocadas por el clima espacial degradan la precisión del posicionamiento y la navegación.",
+      "❌ Incorrecto. Carreteras y puentes no son afectados directamente por partículas solares. Sin embargo, pueden verse afectados indirectamente si el clima espacial provoca apagones o fallas en sistemas de control, semáforos o logística, pero no sufren daño físico por la radiación espacial.",
+      "❌ Incorrecto. Al igual que las carreteras, edificios y viviendas no se dañan por radiación solar en condiciones normales. El impacto real vendría por fallas de la infraestructura (electricidad, servicios) que dependen de redes eléctricas y de comunicación sensibles."
+    ]
+  },
+  {
+    question: "⚡ ¿Qué problema puede generar en la Tierra?",
+    options: ["Apagones eléctricos", "Erupciones volcánicas", "Tsunamis"],
+    answer: 0,
+    feedback: [
+      "✅ Correcto. Las tormentas geomagnéticas pueden inducir corrientes geomagnéticamente inducidas (GIC) en redes de transmisión eléctrica. Estas GIC pueden saturar transformadores, sobrecargar equipos y, en casos severos, provocar fallos a gran escala. Ejemplo histórico: en marzo de 1989 una tormenta geomagnética dejó sin electricidad a toda la provincia de Quebec (Canadá) al dañar transformadores de alta tensión.",
+      "❌ Incorrecto. Las erupciones volcánicas son procesos geológicos internos de la Tierra (movimiento de magma, presión interna) y no están causadas ni desencadenadas por la actividad solar. No existe evidencia científica sólida que conecte directamente tormentas solares con erupciones volcánicas.",
+      "❌ Incorrecto. Los tsunamis son generados por terremotos submarinos, deslizamientos o erupciones volcánicas en el océano. No tienen relación con fenómenos solares o con el clima espacial."
+    ]
+  },
+  {
+    question: "🚀 ¿Por qué es importante estudiarlo?",
+    options: [
+      "Para predecir terremotos",
+      "Para proteger tecnología y astronautas",
+      "Para cambiar el clima terrestre"
+    ],
+    answer: 1,
+    feedback: [
+      "❌ Incorrecto. No existe una relación causal demostrada entre la actividad solar y la sismicidad terrestre; por tanto, estudiar el clima espacial no sirve para predecir terremotos. Los terremotos dependen de la tectónica y de procesos internos de la Tierra.",
+      "✅ Correcto. Éste es el motivo central: conocer y predecir las perturbaciones solares permite emitir alertas tempranas (por ejemplo, horas o días antes si se detecta una CME dirigida a la Tierra), tomar medidas operativas (apagar o poner en modo seguro satélites, reconfigurar redes eléctricas, posponer caminatas espaciales) y diseñar hardware más resistente. Además, las misiones tripuladas requieren estrategias para reducir la exposición a radiación (refugios, planificación de rutas y tiempos).",
+      "❌ Incorrecto. No podemos “cambiar” el clima terrestre mediante el estudio del clima espacial. Si bien las variaciones solares influyen en la energía que recibe la Tierra, los objetivos de estudiar el clima espacial son protectivos y predictivos, no para manipular el clima global."
+    ]
+  },
+  {
+    question: "🌍 ¿Qué fenómeno natural visible produce el clima espacial?",
+    options: ["Auroras", "Huracanes", "Rayos"],
+    answer: 0,
+    feedback: [
+      "✅ Correcto. Las auroras boreales y australes son manifestaciones directas del clima espacial: cuando las partículas cargadas del viento solar entran en interacción con la magnetosfera y la ionosfera, colisionan con átomos y moléculas atmosféricas produciendo emisiones de luz en diferentes colores. Son el ejemplo más evidente y hermoso de un efecto espacial que podemos ver desde la Tierra.",
+      "❌ Incorrecto. Los huracanes son sistemas meteorológicos tropicales generados por la energía del océano y la atmósfera; no son producto de la actividad solar. Confundir ambos conduce a conclusiones equivocadas sobre causas y mitigación.",
+      "❌ Incorrecto. Los rayos (descargas eléctricas en tormentas) son fenómenos eléctricos atmosféricos generados por separaciones de carga dentro de nubes. No son provocados por partículas solares; sin embargo, condiciones de red y temporales locales pueden influir en la ocurrencia de rayos, pero no es una consecuencia del clima espacial."
+    ]
+  },
+  {
+    question: "🔭 ¿Cómo podemos reducir riesgos del clima espacial?",
+    options: [
+      "Monitoreando el Sol y emitiendo alertas",
+      "Construyendo más satélites sin protección",
+      "Ignorándolo porque no nos afecta"
+    ],
+    answer: 0,
+    feedback: [
+      "✅ Correcto. La mitigación más efectiva es la observación y predicción: misiones y satélites (por ejemplo, dispositivos que monitorean el Sol y el viento solar) permiten detectar erupciones y CME. Con esa información, operadores pueden tomar acciones preventivas: poner satélites en modo seguro, desviar misiones, ajustar cargas en la red eléctrica y coordinar procedimientos para la aviación y los astronautas. Además, diseñar hardware y protocolos resistentes reduce la vulnerabilidad.",
+      "❌ Incorrecto. Añadir satélites sin medidas de protección (blindaje, redundancia, modos de seguridad) aumentaría la cantidad de equipos susceptibles a fallos y elevaría el riesgo global. La estrategia correcta es diseñar satélites robustos y operar de forma coordinada ante alertas.",
+      "❌ Incorrecto. Ignorar el problema es peligroso: la dependencia moderna de comunicaciones, navegación y energía hace que una gran perturbación solar pueda generar consecuencias significativas. La evidencia histórica y los análisis de riesgo muestran claramente que la preparación y la vigilancia son indispensables."
+    ]
+  }
+];
+
+let currentQuestion = 0;
+
+const questionEl = document.getElementById("question");
+const optionsEl = document.getElementById("options");
+const feedbackEl = document.getElementById("feedback");
+const nextBtn = document.getElementById("next-btn");
+
+function loadQuestion() {
+  feedbackEl.textContent = "";
+  nextBtn.style.display = "none";
+  let q = quizData[currentQuestion];
+  questionEl.textContent = q.question;
+  optionsEl.innerHTML = "";
+  q.options.forEach((opt, i) => {
+    let btn = document.createElement("button");
+    btn.textContent = opt;
+    btn.onclick = () => checkAnswer(i);
+    optionsEl.appendChild(btn);
+  });
+}
+
+function checkAnswer(selected) {
+  let q = quizData[currentQuestion];
+  feedbackEl.textContent = q.feedback[selected];
+  nextBtn.style.display = "block";
+}
+
+nextBtn.addEventListener("click", () => {
+  currentQuestion++;
+  if (currentQuestion < quizData.length) {
+    loadQuestion();
+  } else {
+    questionEl.textContent = "🎉 ¡Has completado el quiz!";
+    optionsEl.innerHTML = "";
+    feedbackEl.textContent = "Gracias por participar 🚀";
+    nextBtn.style.display = "none";
+  }
+});
+
+loadQuestion();
+</script>
+    <!-- Galería -->
+    <section id="galeria">
+      <h1>🖼️ Galería</h1>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="img/aurora boreal.jpg" alt="Auroras">
+          <p><strong>Auroras:</strong> 
+           <ol>
+            <li.1><strong>¿Qué es?</strong> 
+            Son cortinas de luz natural que se forman en el cielo nocturno, principalmente en regiones cercanas a los polos. Ocurren cuando partículas cargadas del viento solar chocan con gases de la atmósfera terrestre, como oxígeno y nitrógeno.
+            </li>
+          </ol>
+          </p>
+        </div>
+        <div class="gallery-item">
+          <img src="img/image-removebg-preview (6).png" alt="Erupción Solar">
+          <p><strong>Erupción Solar:</strong>
+            <ol>
+              <li.1><strong>¿Qué es?</strong> 
+              Una erupción solar es una explosión repentina de energía en la superficie del Sol, causada por la liberación de campos magnéticos acumulados. Estas erupciones expulsan radiación electromagnética en todas las direcciones.
+              </li>
+           </ol>
+        </div>
+        <div class="gallery-item">
+          <img src="img/722e209c-c93c-4591-a40e-30feaaa1e7b2.jpg" alt="Tormenta Solar">
+          <p><strong>Tormenta Geomagnética:</strong>
+            <ol> 
+              <li.1><strong>¿Qué es?</strong> 
+              Una tormenta geomagnética es una perturbación temporal del campo magnético de la Tierra causada por la interacción con el viento solar y las eyecciones de masa coronal (CME) del Sol.
+              </li>
+            </ol>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function giveFeedback(button, isCorrect, message) {
+      const feedback = button.parentElement.querySelector('.feedback');
+      feedback.textContent = message;
+      feedback.style.color = isCorrect ? '#00ff99' : '#ff4444';
+    }
+  </script>
+</body>
+</html>
